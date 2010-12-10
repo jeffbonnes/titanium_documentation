@@ -12,6 +12,8 @@
 * [Eclipse Autocomplete](http://jameslow.com/2010/05/31/titanium-autocomplete-eclipse/)
 * [Scite4Titanium 1.3 and Notepad++ Titanium Plugin](http://docs.google.com/View?id=dfrprrw7_19cvmjqkck)
 * [Visual Studio Doc Plugin](http://www.jeremymelton.com/blog/2010/10/appcelerator-titanium-vsdoc-for-visual-studio/)
+* [Livetanium](http://blog.krawaller.se/livetanium)
+
 
 # Reporting other tools
 
