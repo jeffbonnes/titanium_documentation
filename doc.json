@@ -252,6 +252,14 @@
 			"menu":"right"
 		},
 		{
+			"section":"Tutorials",
+			"name":"Animations in Action",
+			"source":"animations_in_action.md",
+			"template":"guide.html",
+			"description": "Walks thru building a basic animation example and provides full source",
+			"menu":"right"
+		},
+		{
 			"section":"FAQ",
 			"name":"Frequently Asked Questions",
 			"source":"faq.md",
