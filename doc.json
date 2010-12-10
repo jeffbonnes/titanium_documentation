@@ -366,8 +366,16 @@
 			"template":"guide.html",
 			"description":"Demonstrates building an app with animation and provides sample code",
 			"menu":"right"
+		},
+		{
+			"section":"Tutorials",
+			"name":"Http Client",
+			"source":"http_client.md",
+			"template":"guide.html",
+			"description":"Demonstrates building an http client and provides sample code",
+			"menu":"right"
 		}
-	],
+	],	
 	"statics":
 	[
 		{
