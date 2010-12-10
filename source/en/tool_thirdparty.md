@@ -15,5 +15,5 @@
 
 # Reporting other tools
 
-If you have a tool, utility, etc. that works with Titanium and would like to be listed here, please let us know by emailing info@appcelerator.com.
+If you have a tool, utility, etc. that works with Titanium and would like to be listed here, please let us know by [emailing us](mailto:docs@appcelerator.com).
 

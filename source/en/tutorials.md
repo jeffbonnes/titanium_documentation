@@ -30,5 +30,5 @@
 
 # Reporting other tutorials
 
-If you have a tutorial about something related to Titanium and would like to be listed here, please let us know by emailing info@appcelerator.com.
+If you have a tutorial about something related to Titanium and would like to be listed here, please let us know by [emailing us](mailto:docs@appcelerator.com).
 

@@ -25,6 +25,8 @@ We'd like to thank the contributions of all Appcelerator employees and specifica
 * [Fred Spencer](http://www.anovice.com/)
 * Ralf Pfeiffer
 * Thomas Huelbert
+* [Tony Guntharp](http://fusion94.org)
+* [Chad Auld](http://opensourcepenguin.net)
 
 
 # Appcelerator Open Source Contributors
@@ -35,6 +37,15 @@ We'd like to thank the following open source contributors for their substantial 
 * [Mital Vora](http://mitalvora.blogspot.com/)
 * [Brion Vibber](http://brionv.com/)
 * [Damien Elmes](http://ichi2.net/)
+
+
+# Appcelerator Documentation Contributors
+
+We'd like to thank the following open source contributors for their substantial contributions to making our documentation better.
+
+* [Giordano Scalzo](http://http://giordano.scalzo.biz)
+* Paul Dowsett
+* Daniel Tamas
 
 
 # Third-party open source contributions
@@ -59,4 +70,4 @@ We'd like to recognize the following third-party open source contributions we'd 
 
 # Others
 
-If we've forgotten you or your organization from the list, it's inadvertent. Please let us know ASAP so we can add you by [emailing us](mailto:info@appcelerator.com).
+If we've forgotten you or your organization from the list, it's inadvertent. Please let us know ASAP so we can add you by [emailing us](mailto:docs@appcelerator.com).
