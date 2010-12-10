@@ -12,7 +12,7 @@ If you have followed everything in the [Getting Started Guide](getting_started.h
 
 ## The Project Creation Process
 
-<info>When you first run Titanium Developer, the most reliable way to ensure that it works correctly is to create a new project and launch it without any modification. If it doesn't work, procede with the following troubleshooting process until it launches successfully, before attempting to troubleshoot your own projects.</info>
+<info>When you first run Titanium Developer, the most reliable way to ensure that it works correctly is to create a new project and launch it without any modification. If it doesn't work, proceed with the following troubleshooting process until it launches successfully, before attempting to troubleshoot your own projects.</info>
 
 When you create a project using Titanium Developer, the command it uses will output some messages to the command line (also known as the "shell"), such as:
 
@@ -53,7 +53,7 @@ In this example, you can see the titanium has successfully created a virtual mac
 * Titanium has not been able to find or access the `android` tool, so you would need to check the path configured for the SDK in Titanium Developer and also the permissions that are set on it
 * the `android` tool has not been able to save the settings, which would indicate a problem with the user-specific `.android` directory
 
-If you click the `Start...` button to boot the emulator, you may recieve an error.  For example:
+If you click the `Start...` button to boot the emulator, you may receive an error.  For example:
 
 ![Android Tools Error Screenshot](../assets/images/guides/start_here/troubleshooting-android-tools-error.png)
 
@@ -71,9 +71,9 @@ However, once the emulator boot sequence has started, the logging information sh
 
 ![Titanium Developer Trace Logging Screenshot](../assets/images/guides/start_here/troubleshooting-run-emu-trace.png)
 
-<note>Whether you are debugging from the command line or Titanium itself, a handy tip is to copy the logging output into a featureful text editor, and use its seach features. Pay particular attention to `error` and `denied` messages, to help you to find a solution.</note>
+<note>Whether you are debugging from the command line or Titanium itself, a handy tip is to copy the logging output into a featureful text editor, and use its search features. Pay particular attention to `error` and `denied` messages, to help you to find a solution.</note>
 
-By inspecting the logs, you gain a much better understand of how Titanium really works. A lot of the commands you could actually run yourself manually at the system's command line. As such, you need to be certain that those commands exist on your system and you have the sufficient access to use them, which usually means ensuring that the files and directories involved have the correct read, write and/or execute filesystem permissions. This behaviour is characteristic of all modern operating systems and, consequently, the troubleshooting and resolution methods are the same.
+By inspecting the logs, you gain a much better understand of how Titanium really works. A lot of the commands you could actually run yourself manually at the system's command line. As such, you need to be certain that those commands exist on your system and you have the sufficient access to use them, which usually means ensuring that the files and directories involved have the correct read, write and/or execute filesystem permissions. This behavior is characteristic of all modern operating systems and, consequently, the troubleshooting and resolution methods are the same.
 
 # File Permissions Solution
 
@@ -83,7 +83,7 @@ The files required by Titanium can be split into a number of categories; Common 
 
 ## Common System Files
 
-Common system files contain core programs and scripts, and their associated files, to which all users must have access in order to run Titanium. Their locations and desriptions are explained in the table below.
+Common system files contain core programs and scripts, and their associated files, to which all users must have access in order to run Titanium. Their locations and descriptions are explained in the table below.
 
 <table>
 <tr>
@@ -256,7 +256,7 @@ These resources should have ownership and the following permissions granted to t
 
 Ordinarily, multiple developers would work on the same project using a versioning system such as git, because concurrent access to the project directory is not supported. However, sometimes you may have multiple local user accounts using the same project a different times. In these cases, it would be useful for you to set up a system group, make each user a member of it and then grant permissions to this group instead of a specific user.
 
-When you lauch the project's application, Titanium will compile the application, and generate files in subdirectories of the project build directories:
+When you launch the project's application, Titanium will compile the application, and generate files in subdirectories of the project build directories:
 <table>
 <tr>
 	<th>Location</th> <th>Contains Files and Directories Including</th> <th>Known As</th>
@@ -523,4 +523,4 @@ This message indicates that when Titanium attempts to use zipalign to open `app.
 
 This error refers to the apkbuilder tool developed by Google that is located in the Google ADK Tools directory. The source of the message is Google's `adb`, located in the same directory. Titanium uses this tool to produce it's emulator logging output. Hence, this is not really a Titanium message.
 
-Google has deprecated apkbuilder in favour of the ApkBuilderTask java class. However, apkbuilder still works without any other issues. At some point, a future release of Titanium Developer will be created to utilise the java class but, until then, this message can be safely ignored.
+Google has deprecated apkbuilder in favor of the ApkBuilderTask java class. However, apkbuilder still works without any other issues. At some point, a future release of Titanium Developer will be created to utilize the java class but, until then, this message can be safely ignored.

@@ -3,7 +3,7 @@
 
 * The numerous ways you can participate to help Titanium improve
 * How to submit bug reports effectively
-* How to obtain all of Appcelerator's code and documentatation
+* How to obtain all of Appcelerator's code and documentation
 * How to use Git and Github to submit code
 
 </summary>
@@ -87,7 +87,7 @@ Here's a convenient checklist that you may use for reference when creating new q
 
 # Submitting Bugs
 
-We use [Lighthouse](https://appcelerator.lighthouseapp.com/projects/32238-titanium-mobile/tickets?q=state%3Aopen) as our bug ticketing system. It has a [powerful search syntax](http://help.lighthouseapp.com/faqs/getting-started/how-do-i-search-for-tickets) that you should get into the habit of using when you see any unexpected behaviour from Titanium. This will save you a lot of time debugging issues with the core code that are impossible for you to fix, when you could be looking for a workaround instead.
+We use [Lighthouse](https://appcelerator.lighthouseapp.com/projects/32238-titanium-mobile/tickets?q=state%3Aopen) as our bug ticketing system. It has a [powerful search syntax](http://help.lighthouseapp.com/faqs/getting-started/how-do-i-search-for-tickets) that you should get into the habit of using when you see any unexpected behavior from Titanium. This will save you a lot of time debugging issues with the core code that are impossible for you to fix, when you could be looking for a workaround instead.
 
 If you find a ticket that describes a bug that is important to your project, use the "watch ticket" facility to be kept up-to-date by email of any changes to its status. This is also useful because we can use the total number of watchers to help us prioritize our work.
 
@@ -120,7 +120,7 @@ Being in the habit of writing use-cases can be really helpful when you are troub
 
 For example, you observe that the `layout:'vertical'` property of Titanium's window object does not work as expected for the window's child views. In the process of producing a use-case, you remove every property from both the window and its sub-views except those that are absolutely necessary. With less code, it is often easier to notice a mistake and, in this case, you realize that the children's top property had been inadvertently set, which caused the views to be positioned absolutely rather than relatively.
 
-Syntax errors can be the cause of unusual behaviour from your code. Therefore, there is no point escalating an issue to the community forum or the bug ticketing system until you have ensured it validates successfully.   See our [Third-party tools](tool_thirdparty.html) page for recommendations of good validators, or use [JSLint](http://www.jslint.com) online.
+Syntax errors can be the cause of unusual behavior from your code. Therefore, there is no point escalating an issue to the community forum or the bug ticketing system until you have ensured it validates successfully.   See our [Third-party tools](tool_thirdparty.html) page for recommendations of good validators, or use [JSLint](http://www.jslint.com) online.
 
 In summary, to create a use-case:
 
@@ -139,7 +139,7 @@ You are welcome to download the code in a single archived file, using the "Downl
 
 ![Github Downloads Button Screenshot](../assets/images/guides/contribute/github-downloads-button.png)
 
-However, the recommended way is to use [Git](http://git-scm.com), the Version Control System (VCS). This makes it much easier for you to keep your local copy synchorized with the public version, while also letting you submit code and documentation changes to the core team, if you wish. For more information about how to use it, see the [Git and Github](#git_and_github) section below.
+However, the recommended way is to use [Git](http://git-scm.com), the Version Control System (VCS). This makes it much easier for you to keep your local copy synchronized with the public version, while also letting you submit code and documentation changes to the core team, if you wish. For more information about how to use it, see the [Git and Github](#git_and_github) section below.
 
 ## Finding the License
 
@@ -259,7 +259,7 @@ Before you start, you will need to work through these points:
 The following can make Git a little easier to use:
 
 * use [gitk](http://gitk.sourceforge.net/development.html) to give a visual representation of your repository
-* by default, if a file's permissions change, Git will percieve it just the same as if its contents were changed, Thus, to ignore permissions changes, run  `git config core.filemode false`
+* by default, if a file's permissions change, Git will perceive it just the same as if its contents were changed, Thus, to ignore permissions changes, run  `git config core.filemode false`
 
 
 ## Committing Code with Git in 7 Easy Stages
