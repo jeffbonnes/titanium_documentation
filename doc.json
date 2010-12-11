@@ -360,14 +360,6 @@
 			"menu":"right"
 		},
 		{
-			"section":"User Interface Design",
-			"name":"Animations in Action",
-			"source":"animations_in_action.md",
-			"template":"guide.html",
-			"description":"Demonstrates building an app with animation and provides sample code",
-			"menu":"right"
-		},
-		{
 			"section":"Tutorials",
 			"name":"Http Client",
 			"source":"http_client.md",
