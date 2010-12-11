@@ -16,7 +16,7 @@ Titanium has been brought to this point through the efforts of people with a ver
 
 The approach of someone wishing to contribute to Titanium will ideally be one that begins at the community. By engaging through exchanging questions and answers, proposing ideas, noticing bugs, publishing workarounds and similar activities, you get a much better idea of what Titanium is all about, including how it functions and how it can be improved. In addition to helping you to become a more proficient developer, your feedback is crucial to the core team as it helps set the direction of the project. This ensures Titanium will be as useful as possible to the most people.
 
-This document describe the ways that you can get involved, some of which you may already be doing as a matter of routine. If you haven't considered them as *true* contribution before, then you may have overlooked their value. If these activities are done with the community in mind, and following a few simple guidelines, their results will be a tremendous benefit to everyone.
+This document describes the ways that you can get involved, some of which you may already be doing as a matter of routine. If you haven't considered them to be *true* contribution before, then you may have overlooked their value. If these activities are done with the community in mind, and following a few simple guidelines, their results will be a tremendous benefit to everyone.
 
 ## How to Contribute to Titanium:
 
