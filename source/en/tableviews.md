@@ -517,13 +517,9 @@ Rather than add and remove rows individually, the whole array of custom objects 
 
 * setData(object) - replace the existing rows with those derived from custom objects or explicitly-created TableViewRow objects
 
-## Pull to refresh (iOS)
-
-[this section will be added later]
-
 # The Finished Weather App
 
-After implementing all the functionality discussed, the following script is the result:
+After implementing all the functionality discussed, the following script, which obtains its data from [data.js](../assets/javascripts/guides/tableviews/data.js), is the result:
 
 <code class="javascript">
 Ti.include('data.js');
@@ -694,15 +690,4 @@ There are many more calculations involved for your mobile platform to produce a 
 
 ## ALWAYS group similar rows with `className`
 
-Rendering rows is an expensive operation, particularly when their layouts are complex.  By setting the `className` property with a common value for each row layout, you enable the platform to make its calculations once and reuse them for the other, similar rows. You should use this property any time you utilize a TableView.
-
-
-
-
-
-
-
-* * *
-Much like a number of other views, such as Ti.UI.TextArea and Ti.UI.Picker, the Titanium.UI.TableView object is an enhanced Titanium.UI.ScrollView
-some similarities in the API
-
+Rendering rows is an expensive operation, particularly when their layouts are complex.  By setting the `className` property with a common value for each row layout, you enable the platform to make its calculations once and reuse them for the other, similar rows. Although it is not recommended for *Simple* TableViews, you should use this property **every time** you utilize a *Standard* TableView,
