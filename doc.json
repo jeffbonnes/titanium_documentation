@@ -221,7 +221,7 @@
 		},
 		{
 			"section":"Tools",
-			"name":"Third-party tools",
+			"name":"Third-party Tools",
 			"source":"tool_thirdparty.md",
 			"template":"guide.html",
 			"description": "A listing of Titanium third-party tools.",
@@ -229,24 +229,8 @@
 		},
 		{
 			"section":"Tutorials",
-			"name":"Titanium tutorials",
+			"name":"Titanium Tutorials",
 			"source":"tutorials.md",
-			"template":"guide.html",
-			"description": "A listing of Titanium tutorials",
-			"menu":"right"
-		},
-		{
-			"section":"Tutorials",
-			"name":"Making a combo box",
-			"source":"making_a_combo_box.md",
-			"template":"guide.html",
-			"description": "A listing of Titanium tutorials",
-			"menu":"right"
-		},
-		{
-			"section":"Tutorials",
-			"name":"Creating a tooltip",
-			"source":"creating_a_tooltip.md",
 			"template":"guide.html",
 			"description": "A listing of Titanium tutorials",
 			"menu":"right"
@@ -269,39 +253,11 @@
 		},
 		{
 			"section":"Platform Specific",
-			"name":"Android specific documentation",
-			"source":"android.md",
-			"template":"guide.html",
-			"description": "Understanding Android specific APIs, usages and differences.",
-			"menu":"right",
-			"inprogress":true
-		},
-		{
-			"section":"Platform Specific",
-			"name":"iOS specific documentation",
-			"source":"ios.md",
-			"template":"guide.html",
-			"description": "Understanding iOS specific APIs, usages and differences.",
-			"menu":"right",
-			"inprogress":true
-		},
-		{
-			"section":"Platform Specific",
-			"name":"Blackberry specific documentation",
-			"source":"blackberry.md",
-			"template":"guide.html",
-			"description": "Understanding Blackberry specific APIs, usages and differences",
-			"menu":"right",
-			"inprogress":true
-		},
-		{
-			"section":"Platform Specific",
 			"name":"Blackberry Preview Getting Started Guide",
 			"source":"blackberry_preview.md",
 			"template":"guide.html",
 			"description": "Get started with the BlackBerry preview",
-			"menu":"right",
-			"inprogress":true
+			"menu":"right"
 		},
 		{
 			"section":"Extending Titanium",
@@ -309,7 +265,8 @@
 			"source":"module_ios.md",
 			"template":"guide.html",
 			"description": "Extending Titanium with the iOS Module Developer Guide",
-			"menu":"left"
+			"menu":"right",
+			"inprogress":true
 		},
 		{
 			"section":"Extending Titanium",
@@ -317,7 +274,8 @@
 			"source":"module_android.md",
 			"template":"guide.html",
 			"description": "Extending Titanium with the Android Module Developer Guide",
-			"menu":"left"
+			"menu":"right",
+			"inprogress":true
 		},
 		{
 			"section":"Extending Titanium",
@@ -325,7 +283,8 @@
 			"source":"javascript_frameworks.md",
 			"template":"guide.html",
 			"description":"Extending Titanium with JavaScript Frameworks",
-			"menu":"left"
+			"menu":"right",
+			"inprogress":true
 		},
 		{
 			"section":"Extending Titanium",
@@ -333,39 +292,8 @@
 			"source":"factories.md",
 			"template":"guide.html",
 			"description":"Techniques for building reusable code and libraries.",
-			"menu":"left"
-		},
-		{
-			"section":"User Interface Design",
-			"name":"Design 101",
-			"source":"design_101.md",
-			"template":"guide.html",
-			"description":"Design basics, including typography and composition.",
-			"menu":"right"
-		},
-		{
-			"section":"User Interface Design",
-			"name":"Design for Desktop and Mobile",
-			"source":"design_desktop_and_mobile.md",
-			"template":"guide.html",
-			"description":"Design techniques for building engaging, interactive experiences.",
-			"menu":"right"
-		},
-		{
-			"section":"User Interface Design",
-			"name":" HTML5 vs native UI",
-			"source":"html5_vs_native_ui.md",
-			"template":"guide.html",
-			"description": "The difference between HTML5 and native UI elements in the Titanium case",
-			"menu":"right"
-		},
-		{
-			"section":"Tutorials",
-			"name":"Http Client",
-			"source":"http_client.md",
-			"template":"guide.html",
-			"description":"Demonstrates building an http client and provides sample code",
-			"menu":"right"
+			"menu":"right",
+			"inprogress":true
 		}
 	],	
 	"statics":

@@ -64,7 +64,6 @@
       % else:
       <ul class="nav">
       % endif      
-        <li><a href="index.html">Home</a></li>
         <li class="index"><a href="index.html" onclick="guideMenu(); return false;" id="guidesMenu">Guides Index</a>
           <div id="guides" class="clearfix" style="display: none;">
             <hr />
@@ -99,8 +98,9 @@
                 % endfor
             </dl>
           </div>
-        </li>
-        <li><a href="contribute.html">Contribute</a></li>
+        </li>	
+				<li><a href="http://developer.appcelerator.com">Dev Center</a></li>
+				<li><a href="contribute.html">Contribute</a></li>
         <li><a href="credits.html">Credits</a></li>
       </ul>
       % if globals.has_key('website'):
