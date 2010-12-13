@@ -12,9 +12,9 @@ understand:
 
 # Remote Data in Titanium
 
-Your Titanium application can interact with remote servers over [HTTP](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) 
-using the `HTTPClient` object provided through the `Ti.Network` namespace.  HTTPClient's API mirrors that of the XMLHTTPRequest 
-object in the web browser, so if you have done any Ajax programming in the browser (outside of libraries like Dojo or jQuery, 
+Your Titanium application can interact with remote servers over [HTTP](http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)
+using the `HTTPClient` object provided through the `Titanium.Network` namespace.  HTTPClient's API mirrors that of the XMLHTTPRequest
+object in the web browser, so if you have done any Ajax programming in the browser (outside of libraries like Dojo or jQuery,
 which use XMLHTTPRequest), HTTPClient will be familiar to you.
 
 # HTTPClient and RESTful resources
@@ -22,8 +22,8 @@ which use XMLHTTPRequest), HTTPClient will be familiar to you.
 It is possible to use HTTPClient to interact with many popular types of web services, but the easiest form to work
 with are REST-style web services.  Defining and explaining RESTful web services is beyond the scope of this guide, but
 [you can learn more about REST here](http://en.wikipedia.org/wiki/Representational_State_Transfer).  For our purposes, it is
-sufficient to understand that a 'resource' is some bit of data on the web, identified by a 
-[URI](http://en.wikipedia.org/wiki/Uniform_Resource_Identifier).  Most commonly, your mobile application will interact with 
+sufficient to understand that a 'resource' is some bit of data on the web, identified by a
+[URI](http://en.wikipedia.org/wiki/Uniform_Resource_Identifier).  Most commonly, your mobile application will interact with
 this data on the web using HTTP GET or POST requests (though the full range of HTTP verbs are supported by HTTPClient).
 
 ## GET requests
@@ -39,7 +39,7 @@ Here is a simple example of this using Titanium's JavaScript API:
 	var xhr = Ti.Network.createHTTPClient(); // returns an instance of HTTPClient
 	xhr.open('GET','http://www.google.com');
 	xhr.send();
-	
+
 Most of the time, simply sending the request is not useful to your application.  You are likely interested in the data the
 server will respond with, which is available in the response body.  In order to access this data, you can specify callback
 functions to be executed at specific points in the lifecycle of the request.
@@ -48,41 +48,41 @@ but the most common are `onload` and `onerror` - the former being called after a
 received, and the latter being called if there is an error in trying to retrieve the desired resource.
 
 	var xhr = Ti.Network.createHTTPClient(); // returns an instance of HTTPClient
-	
+
 	xhr.onload = function(e) {
 		//this fires when your request returns successfully
 		//this.responseText and this.responseXML
 		//will be used often
 	};
-	
+
 	xhr.onerror = function(e) {
 		//this fires if Titanium/the native SDK cannot successfully retrieve a resource
 	};
-	
+
 	xhr.open('GET','http://www.google.com');
 	xhr.send();
-	
+
 The handling of network communication is handled asynchronously, since you would not want your application to hang while waiting on an
 HTTP request to return.
 
 ## POST requests
 
-Often you will need to send data to the server in the body of your request, as you would in a standard HTML form.  This is typically 
+Often you will need to send data to the server in the body of your request, as you would in a standard HTML form.  This is typically
 accomplished via a POST (or PUT) request.  Titanium provides an easy way of sending along a POST body with a request, automatically
 serializing JavaScript object graphs into form-encoded POST parameters:
 
 	var xhr = Ti.Network.createHTTPClient();
-	
+
 	xhr.onload = function(e) {
 		//handle response
 	};
-	
+
 	xhr.open('POST','http://www.myblog.com/post.php');
 	xhr.send({
 		title:'My awesome blog',
 		body:'Today I met Susy at the laundromat.  Best day EVAR!'
 	});
-	
+
 You can also send arbitrary string data as the body of your post by passing a string to `send`:
 
 	xhr.send('<some><xml><data></data></xml></some>');
@@ -105,18 +105,18 @@ Titanium has built-in support for JSON serialization in the `JSON` namespace.
 		foo:'bar',
 		stuff:[1,2,3]
 	};
-	
+
 	//deserialize...
 	var myObjectString = JSON.stringify(myObject);
 	// returns '{"foo":"bar","stuff":[1,2,3]}'
-	
+
 	//re-serialize...
 	var myNewObject = JSON.parse(myObjectString);
 	// myNewObject.stuff[1] === 2
-	
+
 If you have a server-side resource (web service) that has a JSON response format, you can very easily serialize that response
 inside HTTPClient's `onload` function.  The data returned from your web service will be stored as a property of the HTTPClient
-[object](http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network.HTTPClient-object.html), so it is accessed and 
+[object](http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.Network.HTTPClient-object.html), so it is accessed and
 parsed like so:
 
 	xhr.onload = function(e) {
@@ -130,7 +130,7 @@ inside your JavaScript application and it is a very compact format.  However, ma
 interface that you must work with in your client application.  Titanium provides facilities for consuming XML by providing an
 [XML DOM Level 2 implementation](http://www.w3.org/TR/DOM-Level-2-Core/), and automatically serializing XML responses into one
 of our [XML Document objects](http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.XML.DOMDocument-object.html).  All
-XML-related functionality in Titanium is contained in the `Ti.XML` namespace.
+XML-related functionality in Titanium is contained in the `Titanium.XML` namespace.
 
 Inside your handler function, if your response has an XML `Content-Type` header, Titanium will automatically serialize the response
 text into XML for your use:
@@ -138,7 +138,7 @@ text into XML for your use:
 	xhr.onload = function(e) {
 		var doc = this.responseXML.documentElement;
 		//this is the XML document object
-		
+
 		//Use the DOM API to parse the document
 		var elements = doc.getElementsByTagName("someTag");
 	};
@@ -153,8 +153,8 @@ and store it locally on the device.  Luckily, both are easily accomplished with 
 ## File upload
 
 Assuming you have a server-side service which accepts file uploads, you should find upload fairly straightforward.  Titanium handles the
-setting of headers and marshaling POST parameters for you, so you simply need to pass a Titanium [blob](http://en.wikipedia.org/wiki/Blob_(computing)) 
-object to `send()`.  A blob is returned by many different Titanium APIs, including `Ti.Filesystem.File.read`.  Below, you will find an example 
+setting of headers and marshaling POST parameters for you, so you simply need to pass a Titanium [blob](http://en.wikipedia.org/wiki/Blob_(computing))
+object to `send()`.  A blob is returned by many different Titanium APIs, including `Titanium.Filesystem.File.read`.  Below, you will find an example
 of how you might select a photo from the device photo gallery, and upload that blob to a web service:
 
 	Titanium.Media.openPhotoGallery({
@@ -163,7 +163,7 @@ of how you might select a photo from the device photo gallery, and upload that b
 			var xhr = Titanium.Network.createHTTPClient();
 			xhr.onload = function(e) {
 				Ti.UI.createAlertDialog({
-					title:'Success', 
+					title:'Success',
 					message:'status code ' + this.status
 				}).show();
 			};
@@ -179,7 +179,7 @@ of how you might select a photo from the device photo gallery, and upload that b
 ## File download
 
 Occasionally, you will also need to download and store a file from a remote server.  This is as simple as specifying a filesystem path
-where you would like HTTPClient to store the file.  Below is an example of how to fetch a file from a server and store it 
+where you would like HTTPClient to store the file.  Below is an example of how to fetch a file from a server and store it
 in the `applicationDataDirectory`, the primary location for any read/write Filesystem IO in a Titanium application:
 
 	var c = Titanium.Network.createHTTPClient();
@@ -239,7 +239,7 @@ to your server, with the appropriate contents:
 
 	client.open('POST', 'https://someserver.com/someendpoint.asmx');
 	client.send({xml: soapRequest});
-	
+
 Bear in mind the above SOAP envelope is completely made up and derived from another service.  In order to use your own SOAP web services in
 this fashion, you will need to understand what the contents of a SOAP request to your server actually looks like as an HTTP request.  Here,
 other third party tools can help, particularly ones that let you inspect the raw HTTP requests and responses for your web service.  On the
