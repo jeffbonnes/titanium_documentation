@@ -2,7 +2,7 @@
 This guide will show you how to work with tabular data in TableViews, a core UI component of many mobile
 applications.  By the end of this guide, you should understand:
 
-* The different between *Simple* and *Standard* TableViews
+* The difference between *Simple* and *Standard* TableViews
 * How to create and style table views
 * How to update your table view with additional data
 * How to optimize your table view for large data sets
@@ -12,16 +12,16 @@ applications.  By the end of this guide, you should understand:
 
 # The Titanium TableView
 
-There are members of our community who had already developed a number of mobile applications in native code before discovering Titanium. When they were offered projects to target multiple platforms, some of them didn't have the time or inclination to learn a completely new language and environment. Others were concerned about the ever-increasing burden, and uninspiring job, of maintaining the same applications across numerous codebases. While these are indeed the initial motivations that make a lot of people reassess their development strategy, TableViews are a good example of how Titanium provides another equally-compelling advantage.
+There are members of our community who had already developed a number of mobile applications in native code before discovering Titanium. When they were offered projects to target multiple platforms, some of them didn't have the time or inclination to learn a completely new language and environment. Others were concerned about the ever-increasing burden, and uninspiring job, of maintaining the same applications across numerous codebases. While these are indeed the initial motivations that make a lot of people re-assess their development strategy, TableViews are a good example of how Titanium provides another equally-compelling advantage.
 
 It would be a fairly complex task to build a table in native code that incorporates sufficient functionality to make it useful. Conversely, utilizing just its basic features, much of the most commonly-used functionality comes built-in with the standard Titanium API. For instance, with Titanium's 'Simple' TableViews you can:
 
 * customize the look and feel of your tables and their rows
 * add styled headers and footers to your tables
-* dynamically add and remove rows. If there are too many rows to fit on the screen at once, the table will accommodate them by changing from a static to a movable, scrolling, view
+* dynamically add and remove rows (if there are too many rows to fit on the screen at once, the table will accommodate them by changing from a static to a movable, scrolling, view)
 * add a search bar that will filter rows as the user types
 
-With far less code for you to write to achieve the same result, Titanium makes it very easy to get an impressive prototype up and running, while also being powerful-enough to allow the same code to be developed into a fully-fledged application suitable for public consumption.
+With far less code for you to write to achieve the same result, Titanium makes it very easy to get an impressive prototype up and running, while also being powerful enough to allow the same code to be developed into a fully-fledged application suitable for public consumption.
 
 # TableView basics
 
@@ -47,7 +47,7 @@ To generate a simple table, use an approach like the following:
     * `top`, `bottom`, `left`, `right`, `height`, `width` positioning and dimension properties, common to almost all Titanium objects
 
 <note>
-In all these examples, the variable named `weatherData` is used to store the data. Obviously, in order for your app to be useful, in the real world the data would be retrieved on-the-fly from a live source, but static data is used here in the interests of clarity.
+In all of the following examples, the variable named `weatherData` is used to store the data. Obviously, in order for your app to be useful, in the real world the data would be retrieved on-the-fly from a live source, but static data is used here in the interests of clarity.
 </note>
 
 <code class="javascript">
@@ -211,7 +211,7 @@ As you can see, in about 50 lines of code and a few graphical assets, you can cr
 
 ## The SearchBar
 
-By assigning a [Titanium.UI.SearchBar](http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.SearchBar-object) to the table's `search` property, and adding a few simple event listeners, you can quickly incorporate a useful mechanism for users to filter rows by in typing search terms.
+By assigning a [Titanium.UI.SearchBar](http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.UI.SearchBar-object) to the table's `search` property, and adding a few simple event listeners, you can quickly incorporate a useful mechanism for users to filter rows by typing in search terms.
 
 <code class="javascript">
 var searchBar = Titanium.UI.createSearchBar({
@@ -244,7 +244,7 @@ searchBar.addEventListener('cancel', function(e)
 });
 </code>
 
-This results in a searchBar positioned above the table, containing some `hintText` to make it obvious to the user how it works, and a cancel button, to clear the user's text and reset the table's rows so that all are displayed.
+This results in a searchBar positioned above the table, containing some `hintText` (to make it obvious to the user how it works) and a cancel button (to clear the user's text and reset the table's rows so that all are displayed).
 
 ![screenshot of a simple TableView with enhanced content](../assets/images/guides/tableviews/tableview-simple-enhanced-searchbar-unfiltered.png)
 
@@ -256,7 +256,7 @@ Typing into the field dynamically hides all rows except those that contain the s
 
 For want of a better word, a *Standard* TableView describes a table that has been created using pre-defined TableViewRow objects, rather than relying on the TableView's automated process for their creation.
 
-'Simple' TableViews are appropriate for many situations, and should certainly not be limited to just application prototyping. However, when your table requirements are more involved, with row layouts that consist of one or more child views (ie views, labels, buttons etc) and enhanced functionality, you will need to explicitly create your TableViewRows.
+'Simple' TableViews are appropriate for many situations, and should certainly not be limited to just application prototyping. However, when your table requirements are more involved, with row layouts that consist of one or more child views (i.e. views, labels, buttons etc.) and enhanced functionality, you will need to explicitly create your TableViewRows.
 
 ## Improving the data and view layout
 
@@ -268,7 +268,7 @@ title: "Mountain View (North America)\nCloudy",
 
 Setting the title of a row to this string means that it is unavoidable that the location information must be updated whenever weather conditions change.
 
-Furthermore, user interaction cannot be developed to utilize the information independently of one another. For example, you may desire for the table to be filtered by either continent or weather condition when the user touches the respective string. This would not be possible with the current configuration.
+Furthermore, user interaction cannot be developed to utilize separate pieces of information independently of each other. For example, you may desire for the table to be filtered by either continent or weather condition when the user touches the respective string. This would not be possible with the current configuration.
 
 The solution is to split your static, dynamic and interactive data into separate views.
 
@@ -305,7 +305,7 @@ From now on, the full dataset will be stored in an external file named [data.js]
 
 ## Programmatic row creation with Titanium Views
 
-For the reasons explained in the previous section, you can iterate through the dataset using a loop, and assign each item to a separate view:, as this code demonstrates:
+For the reasons explained in the previous section, you can iterate through the dataset using a loop, and assign each item to a separate view, as this code demonstrates:
 
 <code class="javascript">
 Ti.include('data.js');
@@ -411,7 +411,7 @@ window.open();
 </code>
 
 <note>
-Notice in particular where extra custom properties have been created in the Titanium objects to store additional data. For example:
+Notice, in particular, where extra custom properties have been created in the Titanium objects to store additional data. For example:
 
 * `thisLabelContinent` - as the data stored in `title` has been modified for presentation purposes, a property named `continent` has been set with the raw continent data
 * `thisLabelTemp` - to easily retrieve the temperature in Fahrenheit and Centigrade, the respective values are stored in `temp_f` and `temp_c`
@@ -419,7 +419,7 @@ Notice in particular where extra custom properties have been created in the Tita
 
 ## TableView user interaction and events
 
-Modern Graphical User Interfaces with ingenious user interaction have undoubtedly contributed to smartphones' remarkable success in recent years. To add some of this magic to your Weather App you might incorporate the following functionality:
+Modern Graphical User Interfaces, with ingenious user interaction, have undoubtedly contributed to smartphones' remarkable success in recent years. To add some of this magic to your Weather App you might incorporate the following functionality:
 
 1. Filter by Continent - allow the user to click on the continent string displayed on a row, and for all other rows describing locations in other continents to be filtered out (hidden)
 2. Toggle Temperature Units - allow the user to click on the temperature displayed on any row, and for the temperature of all rows to toggle between Fahrenheit and Centigrade
@@ -471,7 +471,7 @@ The [Titanium.UI.TableView](http://developer.appcelerator.com/apidoc/mobile/late
 
 * appendRow(TableViewRowObject) - add row to the end of the table, by passing a TableViewRow object as a parameter
 * updateRow(TableViewRowObject) - replace an existing TableViewRowObject in the table with a new or modified TableViewRowObject
-* deleteRow(TableViewRowObject) - delete row from the table, identified by the table's row index number or the
+* deleteRow(TableViewRowObject) - delete row from the table, identified by the table's row index number
 * insertRowBefore(index, TableViewRowObject) - insert a row into a table, positioned before the table row index parameter
 * insertRowAfter(index, TableViewRowObject) - insert a row into a table, positioned after the table row index parameter
 
@@ -686,7 +686,7 @@ Related to the previous point, rather than giving the user countless numeric opt
 
 ## Incrementally populate table with rows
 
-Just as wouldn't expect your favorite online book store to display the hundreds of books that meet your criteria on a single page, paginate your tables with a "show more results" option rather than passing a massive array of objects to the TableView at its creation. This approach will vastly improve the application's responsiveness when a table initializes.
+Just as you wouldn't expect your favorite online book store to display the hundreds of books that meet your criteria on a single page, paginate your tables with a "show more results" option, rather than passing a massive array of objects to the TableView at its creation. This approach will vastly improve the application's responsiveness when a table initializes.
 
 ## Minimize views in programmatic rows
 
@@ -694,7 +694,7 @@ There are many more calculations involved for your mobile platform to produce a 
 
 ## ALWAYS group similar rows with `className`
 
-Rendering rows is an expensive operation, particularly when their layouts are complex.  By setting the `className` property with a common value for each row layout, you enable the platform to make its calculations once and reuse them for the other similar rows. You should use this property any time you utilize a TableView.
+Rendering rows is an expensive operation, particularly when their layouts are complex.  By setting the `className` property with a common value for each row layout, you enable the platform to make its calculations once and reuse them for the other, similar rows. You should use this property any time you utilize a TableView.
 
 
 
