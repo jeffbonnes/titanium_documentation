@@ -252,14 +252,6 @@
 			"menu":"right"
 		},
 		{
-			"section":"Platform Specific",
-			"name":"Blackberry Preview Getting Started Guide",
-			"source":"blackberry_preview.md",
-			"template":"guide.html",
-			"description": "Get started with the BlackBerry preview",
-			"menu":"right"
-		},
-		{
 			"section":"Extending Titanium",
 			"name":"iOS Module Developer Guide",
 			"source":"module_ios.md",
