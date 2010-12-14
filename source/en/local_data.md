@@ -148,17 +148,17 @@ var myObject = JSON.parse(Ti.App.Properties.getString('myJSON'));
 
 
 # SQLite Databases
-
+[this section is to be completed soon]
 ## SQL basics and further reading on SQLite
-
+[this section is to be completed soon]
 ## Storing data
-
+[this section is to be completed soon]
 ## Reading data
-
+[this section is to be completed soon]
 ## Updating data
-
+[this section is to be completed soon]
 ## Pre-populating a database
-
+[this section is to be completed soon]
 
 
 # Filesystem Storage
