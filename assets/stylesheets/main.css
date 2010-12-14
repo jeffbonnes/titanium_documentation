@@ -88,7 +88,8 @@ body {
 }
 
 #subheader {
-	background: rgb(154,7,7) url(../images/header_tile.gif) repeat-x;
+	/*background: #4E4848 url(../images/header_tile.gif) repeat-x;*/
+	background-color: #4E4848;
 	color: #FFF;
 	padding: 10px 0;
 	position: relative;
@@ -189,12 +190,12 @@ a, a:link, a:visited {
 	border-radius: 1em;
 	-webkit-border-radius: 1em;
 	-moz-border-radius: 1em;
-	background: #980905;
+	background: #4E4848;
 	position: relative;
 }
 
 #subheader .nav .index a {
-	background: #980905 url(../images/nav_arrow.gif) no-repeat right top;
+	background: #4E4848 url(../images/nav_arrow.png) no-repeat right top;
 	padding-right: 1em;
 	position: relative;
 	z-index: 15;
@@ -205,14 +206,14 @@ a, a:link, a:visited {
 #guides {
 	width: 27em;
 	display: block;
-	background: #980905;
+	background: #4E4848;
 	border-radius: 1em;
 	border: 3px solid white;
 	-webkit-border-radius: 1em;
 	-moz-border-radius: 1em;
 	-webkit-box-shadow: 0.25em 0.25em 1em rgba(0,0,0,0.25);
 	-moz-box-shadow: rgba(0,0,0,0.25) 0.25em 0.25em 1em;
-	color: #f1938c;
+	color: white;
 	padding: 1.5em 2em;
 	position: absolute;
 	z-index: 10;
@@ -227,7 +228,7 @@ a, a:link, a:visited {
 	margin: 0;
 	padding: 0;
 }
-#guides dt {padding:0; margin: 0.5em 0 0;}
+#guides dt {padding:0; margin: 0.5em 0 0; font-weight: bold; font-size: .8em; text-decoration: underline;}
 #guides a {color: #FFF; background: none !important;}
 #guides .L, #guides .R {float: left; width: 50%; margin: 0; padding: 0;}
 #guides .R {float: right;}
@@ -235,8 +236,8 @@ a, a:link, a:visited {
 	display: block;
 	border: none;
 	height: 1px;
-	color: #f1938c;
-	background: #f1938c;
+	color: #FFF;
+	background: #FFF;
 }
 
 /* Headings
