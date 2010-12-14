@@ -46,6 +46,7 @@ We'd like to thank the following open source contributors for their substantial 
 * [Giordano Scalzo](http://http://giordano.scalzo.biz)
 * Paul Dowsett
 * Daniel Tamas
+* Dan Giulvezan
 
 
 # Third-party open source contributions
