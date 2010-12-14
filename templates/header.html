@@ -1,61 +1,61 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="${language_code}" lang="${language_code}">
+<!DOCTYPE HTML>
+<html dir="ltr" lang="en-US">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="description" content="${description}" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="description" content="${description}" />
 
-<title>Appcelerator Documentation Guides : ${title}</title>
+    <title>Appcelerator Documentation Guides : ${title}</title>
 
-<link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css" />
-<link rel="stylesheet" type="text/css" href="../assets/stylesheets/syntax.css" />
-<link rel="stylesheet" type="text/css" href="../assets/stylesheets/print.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="http://developer.appcelerator.com/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/syntax.css" />
+    <link rel="stylesheet" type="text/css" href="../assets/stylesheets/print.css" media="print" />
 
-<script type="text/javascript" src="../assets/javascripts/guides.js"></script>
-<script type="text/javascript" src="../assets/javascripts/code_highlighter.js"></script>
-<script type="text/javascript" src="../assets/javascripts/highlighters.js"></script>
-
-% if globals.has_key('website'):
-<script type="text/javascript" src="../assets/javascripts/jquery.js"></script>
-<script>
-    var page = "${source}";
-    var lang = "${language_code}";
-    var language = "${language}";
-    var baseurl = "${globals['baseurl']}";
-</script>
-<script type="text/javascript" src="../assets/javascripts/admin.js"></script>
-% endif
-
+    <script type="text/javascript" src="../assets/javascripts/guides.js"></script>
+    <script type="text/javascript" src="../assets/javascripts/code_highlighter.js"></script>
+    <script type="text/javascript" src="../assets/javascripts/highlighters.js"></script>
 </head>
-<body class="guide">
-<div id="topNav">
-  <div class="wrapper">
-      % if globals.has_key('website'):
-        <div id="editbar">
-          Admin: 
-          <a href="" id="edit">Edit</a> | 
-          <a href="http://github.com/api/v2/html/commits/list/appcelerator/titanium_documentation/master/source/${language_code}/${source}">History</a> |
-          <a href="https://github.com/appcelerator/titanium_documentation/raw/master/source/${language_code}/${source}">Source</a> | 
-          <a href="${globals['baseurl']}/rebuild?url=${globals['baseurl']}/${language_code}/${source.replace('.md','.html')}">Rebuild Site</a>
-        </div>
-      % endif
-      <div id="languages">
-      <% import os %>
-      % for l in languages:
-        % if language_code == l['code']:
-            ${l['title']}
-        % else:
-        % if os.path.exists(os.path.join(template_dir,'source',l['directory'])):
-            <a href="/${l['code']}">${l['title']}</a>
-        % endif
-        % endif
-      % endfor
-      </div>
-      <div class="clearfix"></div>
-  </div>
-</div>
-  <div id="header">
+<body>
+
+<header role="banner">
+	<div id="header">
+		<div class="titlebarLogo">
+			<h1><a href="http://developer.appcelerator.com/" title="Appcelerator Developer Center">Appcelerator</a></h1>
+			<div class="arrow"></div>
+		</div>
+		<div class="squeeze">
+			<h2><a href="http://developer.appcelerator.com/" title="Appcelerator Developer Center">Developer Center</a></h2>
+			<nav>
+				<div class="login">
+					<a class="last" href="http://www.appcelerator.com" title="Appcelerator.com"><img src="http://developer.appcelerator.com/assets/img/dotcom.png" style="position:relative;top:4px;left:8px;"
+						alt="Appcelerator"/></a>
+				</div>
+			</nav>
+		</div>
+	</div>
+	<div id="nav">
+		<div class="squeeze">
+			<nav>
+				<div class="primary">
+					<div><a href="http://developer.appcelerator.com/get_started" title="Get Started">Get Started</a></div>
+					<div><a href="http://developer.appcelerator.com/questions" title="Q&A">Q&A</a></div>
+					<div><a href="http://developer.appcelerator.com/documentation" title="Docs">Docs</a></div>
+					<div><a href="http://developer.appcelerator.com/training" title="AppU Training">AppU Training</a></div>
+					<div><a href="http://developer.appcelerator.com/tools" title="Products">Products</a></div>
+					<div class="last"><a href="http://developer.appcelerator.com/get_help" title="Get Help">Get Help</a></div>
+					<div class="clear"></div>
+				</div>
+			</nav>
+			<nav>
+				<div class="secondary">
+					<a class="last" title="My Q&A" href="http://developer.appcelerator.com/myqa">My Q&amp;A</a>
+				</div>
+			</nav>
+		</div>
+	</div>
+</header>
+
+<div id="subheader">
     <div class="wrapper clearfix">
       <h1><a href="index.html" title="Return to home page">Appcelerator Documentation</a></h1>
       <p class="hide"><a href="#mainCol">Skip navigation</a>.</p>
@@ -114,4 +114,3 @@
       % endif
     </div>
   </div>
-  <hr class="hide" />

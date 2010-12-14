@@ -1,17 +1,70 @@
 <hr class="hide" />
-<div id="footer">
-<div class="wrapper">
-  <p>The documentation template was adapted from <a href="http://edgeguides.rubyonrails.org/">Rails Guides</a> which is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-Share Alike 3.0</a>. It's really beautiful and we love it so we borrowed from it. The rest of the documentation content contained herein is Copyright &copy; 2010 by Appcelerator, Inc. All Rights Reserved. Use of this website signifies your agreement to the <a href="http://www.appcelerator.com/company/terms-and-conditions-of-use/">Terms of Use</a> and <a href="http://www.appcelerator.com/company/privacy/">Online Privacy Policy</a>.</p>
-  <p>Appcelerator is a registered trademark of <a href="http://www.appcelerator.com">Appcelerator, Inc.</a> Appcelerator Titanium is a trademark of <a href="http://www.appcelerator.com">Appcelerator, Inc.</a> You can download Appcelerator Titanium at <a href="http://www.appcelerator.com/download">Titanium Download Page</a>.
-    <% 
-        from datetime import date
-        today = date.today()
-    %>
-  <p>This guide was generated on <tt>${today.strftime('%b %d %Y %I:%M %p')}</tt>.</p>
-  % if globals.has_key('website'):
-  <p>Download the full documentation as a <a href="${globals['baseurl']}/zip">HTML zipfile</a></p>
-    % endif
-</div>
-</div>
+<% 
+    from datetime import date
+    today = date.today()
+%>
+
+<footer>
+	<div id="footer">
+		<div class="squeeze">
+	        <p class="generation-date">This guide was generated on <tt>${today.strftime('%b %d %Y %I:%M %p')}</tt>.</p>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/products/" title="Products">Products</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/" title="Titanium Platform">Titanium Platform</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-platform/titanium-architecture/" title="Titanium Architecture">Titanium Architecture</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-mobile/" title="Titanium Mobile">Titanium Mobile</a></li>
+					<li><a href="http://www.appcelerator.com/products/titanium-desktop/" title="Titanium Desktop">Titanium Desktop</a></li>
+					<li><a href="http://www.appcelerator.com/products/native/" title="The Native Advantage">The Native Advantage</a></li>
+					<li><a href="http://www.appcelerator.com/products/download/" title="Download Titanium">Download Titanium</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/partners/" title="Partners">Partners</a></li>
+					<li><a href="http://www.appcelerator.com/partners/case-studies/" title="Case Studies">Case Studies</a></li>
+					<li><a href="http://www.appcelerator.com/partners/testimonials/" title="Testimonials">Testimonials</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="<?=ASSETPATH?>/resources/" title="Resources">Resources</a></li>
+					<li><a href="http://www.appcelerator.com/resources/app-u/" title="Appcelerator University">Appcelerator University</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/showcase/" title="Showcase">Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/applications-showcase/" title="Applications Showcase">Applications Showcase</a></li>
+					<li><a href="http://www.appcelerator.com/showcase/videos/" title="Videos">Videos</a></li>
+				</ul>
+			</div>
+			<div class='footer_menu'>
+				<ul>
+					<li class="title"><a href="http://www.appcelerator.com/company/" title="About Appcelerator, Inc.">About Appcelerator, Inc.</a></li>
+					<li><a href="http://www.appcelerator.com/company/leadership-team/" title="Leadership Team">Leadership Team</a></li>
+					<li><a href="http://www.appcelerator.com/company/investors-board/" title="Investors &#038; Board">Investors &#038; Board</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/" title="News &#038; Press">News &#038; Press</a></li>
+					<li><a href="http://www.appcelerator.com/company/news-press/press-releases/" title="Press Releases">Press Releases</a></li>
+					<li><a href="http://www.appcelerant.com" title="Appcelerant Blog">Appcelerant Blog</a></li>
+					<li><a href="http://www.appcelerator.com/company/contact-us/" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</div> 
+
+			<div class="clear"></div>
+			
+			<div class="legal">
+				<a href="http://www.appcelerator.com"><img style="float:left; margin-right:15px" src="http://developer.appcelerator.com/assets/img/a-logo.png" alt="Appcelerator" /></a>
+				<a href="http://www.appcelerant.com">Blog</a> |  
+				<a href="http://twitter.com/appcelerator">Twitter</a> |
+				<a href="/company/privacy">Privacy Policy</a> |
+				<a href="/company/terms-and-conditions-of-use">Terms and Conditions</a>
+				<br />
+				&copy; 2008-<?=date('Y')?> Appcelerator Inc. All rights reserved.  Appcelerator is a registered trademark.
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</footer>
 </body>
 </html>

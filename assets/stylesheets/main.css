@@ -71,6 +71,7 @@ table th {
 /* Structure and Layout
 --------------------------------------- */
 
+/*
 body {
 	text-align: center;
 	font-family: Helvetica, Arial, sans-serif;
@@ -79,6 +80,29 @@ body {
 	background: #222;
 	color: #999;
 	}
+*/
+
+#topNav {
+	padding: 5px 0;
+	color: #565656;
+}
+
+#subheader {
+	background: rgb(154,7,7) url(../images/header_tile.gif) repeat-x;
+	color: #FFF;
+	padding: 10px 0;
+	position: relative;
+	z-index: 99;
+	}
+
+#subheader h1 {
+	padding: 0 0 5px 0;
+	font-color: white;
+}
+
+#subheader a {
+	font-color: white;
+}
 
 .wrapper {
 	text-align: left;
@@ -86,18 +110,6 @@ body {
 	width: 69em;
 	}
 
-#topNav {
-	padding: 5px 0;
-	color: #565656;
-}
-
-#header {
-	background: #c52f24 url(../images/header_tile.gif) repeat-x;
-	color: #FFF;
-	padding: 1.5em 0;
-	position: relative;
-	z-index: 99;
-	}
 
 #feature {
 	background: #d5e9f6 url(../images/feature_tile.gif) repeat-x;
@@ -131,6 +143,7 @@ body {
 
 #extraCol {display: none;}
 
+/*
 #footer {
 	padding: 2em 0;
 	background: url(../images/footer_tile.gif) repeat-x;
@@ -139,8 +152,9 @@ body {
 	padding-left: 2em;
 	width: 67em;
 }
+*/
 
-#header .wrapper, #topNav .wrapper, #feature .wrapper {padding-left: 1em; width: 68em;}
+#subheader .wrapper, #topNav .wrapper, #feature .wrapper {padding-left: 1em; width: 68em;}
 #feature .wrapper {width: 45em; padding-right: 23em; position: relative; z-index: 0;}
 
 /* Links
@@ -148,7 +162,7 @@ body {
 
 a, a:link, a:visited {
 	color: #ee3f3f;
-	text-decoration: underline;
+	/* text-decoration: underline; */
 	}
 
 #mainCol a, #subCol a, #feature a {color: #980905;}
@@ -160,17 +174,17 @@ a, a:link, a:visited {
 .nav {margin: 0; padding: 0;}
 .nav li {display: inline; list-style: none;}
 
-#header .nav {
+#subheader .nav {
 	float: right;
 	margin-top: 1.5em;
 	font-size: 1.2857em;
 }
 
-#header .nav li {margin: 0 0 0 0.5em;}
-#header .nav a {color: #FFF; text-decoration: none;}
-#header .nav a:hover {text-decoration: underline;}
+#subheader .nav li {margin: 0 0 0 0.5em;}
+#subheader .nav a {color: #FFF; text-decoration: none;}
+#subheader .nav a:hover {text-decoration: underline;}
 
-#header .nav .index {
+#subheader .nav .index {
 	padding: 0.5em 1.5em;
 	border-radius: 1em;
 	-webkit-border-radius: 1em;
@@ -179,14 +193,14 @@ a, a:link, a:visited {
 	position: relative;
 }
 
-#header .nav .index a {
+#subheader .nav .index a {
 	background: #980905 url(../images/nav_arrow.gif) no-repeat right top;
 	padding-right: 1em;
 	position: relative;
 	z-index: 15;
 	padding-bottom: 0.125em;
 }
-#header .nav .index:hover a, #header .nav .index a:hover {background-position: right -81px;}
+#subheader .nav .index:hover a, #subheader .nav .index a:hover {background-position: right -81px;}
 
 #guides {
 	width: 27em;
@@ -284,9 +298,9 @@ h6 {
 #topNav strong {color: #999; margin-right: 0.5em;}
 #topNav strong a {color: #FFF;}
 
-#header h1 {
+#subheader h1 {
 	float: left;
-	xbackground: url(../images/appcelerator_logoR_50.png) no-repeat;
+	background: url(../images/appcelerator_logoR_50.png) no-repeat;
 	background: url(../images/appc_docs_logo.png) no-repeat;
 	width: 337px;
 	text-indent: -9999em;
@@ -294,7 +308,7 @@ h6 {
 	padding: 0;
 }
 
-#header h1 a {
+#subheader h1 a {
 	text-decoration: none;
 	display: block;
 	height: 77px;
@@ -485,4 +499,8 @@ div.important p, div.caution p, div.warning p, div.note p, div.info p {
     width:900px;
     font-size:18px;
     font-family: Monaco, 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+}
+
+#footer .generation-date {
+	font-size: 10px;
 }
