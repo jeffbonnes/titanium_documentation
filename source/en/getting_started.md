@@ -14,7 +14,7 @@ Thanks for checking out Titanium - we hope you'll have your first native applica
 before dinner.  Before we get into installing and running Titanium, let's (very) briefly go over what the Titanium platform is, 
 how it works at a shallow level, and the kinds of capabilities you can expect to find.
 
-![platform](http://img.skitch.com/20101130-mi6fy1npry45cug9wfx244r3w8.png)
+![platform](../assets/images/20101130-mi6fy1npry45cug9wfx244r3w8.png)
 
 ## Titanium Desktop SDK
 
@@ -45,19 +45,6 @@ Titanium Developer is a desktop application you will install on your computer to
 Titanium Mobile or Desktop application projects.  Titanium Developer will also automatically keep your Mobile and Desktop SDK
 installations up to date.  Titanium Developer is essentially a nice GUI over the top of scripts in the Desktop and Mobile SDKs
 which create and run Titanium projects.
-
-## The long version
-
-For a more prescriptive step by step guide to setting up Titanium, you can refer to the long form getting started guide
-for your operating system:
-
-* [Mac OSX](http://assets.appcelerator.com.s3.amazonaws.com/docs/GettingStartedTitanium_Mac.pdf)
-* [Windows](http://assets.appcelerator.com.s3.amazonaws.com/docs/GettingStartedTitanium_Windows.pdf)
-* [Linux](http://assets.appcelerator.com.s3.amazonaws.com/docs/GettingStartedTitanium_Linux.pdf)
-
-These guides are primarily focused on getting set up for mobile development, but desktop development will work out of the
-box with no additional setup required for native mobile SDKs.  For now, let's go through the basic steps necessary to get 
-Titanium installed and running on your system.
 
 # Installing Titanium
 
@@ -97,7 +84,7 @@ system.  Once unzipped, run the `android` command from `[SDK HOME]/tools`.  This
 will allow you to install the various Android SDK flavors.  In order to create a project, Titanium requires Android 1.6 (APIs level 4), 
 and version 6 of the Android tools or better to be installed through this tool:
 
-![img](http://img.skitch.com/20101129-ct5nw5eitag35jehhxdnp4rg2b.png)
+![img](../assets/images/20101129-ct5nw5eitag35jehhxdnp4rg2b.png)
 
 You may want to download any additional Android OS versions you'd like to test against at this time.  Currently, Titanium Mobile supports
 Android OS versions 1.6, 2.1, and 2.2.  OS versions are available for download under the "Available Packages" heading in the `android` 
@@ -117,7 +104,7 @@ When Developer launches for the first time, you will be prompted to sign in with
 have an Appcelerator Network account, you can create one using the form provided. Once you are signed in, you will be ready to 
 proceed with creating your first Titanium project.
 
-![new project](http://img.skitch.com/20101129-e629pwepga7stabueifh56asjs.png)
+![new project](../assets/images/20101129-e629pwepga7stabueifh56asjs.png)
 
 In the fields provided, you will specify:
 
@@ -133,7 +120,7 @@ You may be prompted to specify a location for the Android SDK for a new mobile p
 first project.  This will be the top-level folder of the Android SDK, containing the `tools` folder and other
 Android platform artifacts.  You can change your SDK location later in Titanium Developer's "Profile" persepective.
 
-![Android SDK](http://img.skitch.com/20101129-uy9d2mwn998p67s36mf6kdppt.png)
+![Android SDK](../assets/images/20101129-uy9d2mwn998p67s36mf6kdppt.png)
 </note>
 
 Click the "Create Project" button to generate your new Titanium project.
@@ -143,7 +130,7 @@ Titanium will generate the necessary files to run a Desktop or Mobile project in
 project creation.  Your new project will appear in Titanium Developer in a list on the lefthand side of the "Projects"
 perspective.
 
-![developer](http://img.skitch.com/20101129-n9ywfn7twyrxt283t6cs4qcsck.png)
+![developer](../assets/images/20101129-n9ywfn7twyrxt283t6cs4qcsck.png)
 
 <note>
 Titanium Developer has three "Perspectives" - the first is the project perspective, where you will go to manage and run
@@ -153,7 +140,7 @@ options for Titanium.
 </note>
 
 ## Where's my code?
-<img src="http://img.skitch.com/20101129-puqysnxcu5widbr9um7x5mw1xk.png" style="float:right;margin:0 0 20px 20px;"></img>
+<img src="../assets/images/20101129-puqysnxcu5widbr9um7x5mw1xk.png" style="float:right;margin:0 0 20px 20px;"></img>
 After your project is created, a starter project will be created for you in the directory you specified.  All project types share 
 a similar layout:
 
@@ -172,15 +159,15 @@ from Titanium Developer right away.  [Check out the application project structur
 Let's fire up the default application to make sure everything is working properly.  Under the "Test and Package" tab,
 hit the launch button to fire up your application in a mobile emulator or a new desktop window, depending on your project type.
 
-![run](http://img.skitch.com/20101129-c8mfuayu3m7tw7itcheeemfrcq.png)
+![run](../assets/images/20101129-c8mfuayu3m7tw7itcheeemfrcq.png)
 
 A default mobile application should look like this:
 
-![android](http://img.skitch.com/20101129-pe1nkb3ynt14tqsstt1nh3uxsb.png)
+![android](../assets/images/20101129-pe1nkb3ynt14tqsstt1nh3uxsb.png)
 
 A default desktop application should look like this:
 
-![desktop](http://img.skitch.com/20101129-k58d3ks7ecy2d6hmtj4dp32ph5.png)
+![desktop](../assets/images/20101129-k58d3ks7ecy2d6hmtj4dp32ph5.png)
 
 # What's Next?
 
