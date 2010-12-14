@@ -136,8 +136,7 @@
 			"source":"tableviews.md",
 			"template":"guide.html",
 			"description": "Understanding how to use TableViews in your Titanium application.",
-			"menu":"left",
-			"inprogress":true
+			"menu":"left"
 		},
 		{
 			"section":"Architecture",
@@ -287,7 +286,7 @@
 			"menu":"right",
 			"inprogress":true
 		}
-	],	
+	],
 	"statics":
 	[
 		{
