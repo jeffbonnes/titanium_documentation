@@ -100,8 +100,7 @@
 			"source":"local_data.md",
 			"template":"guide.html",
 			"description": "Working with Local Data such as files, databases and properties.",
-			"menu":"left",
-			"inprogress":true
+			"menu":"left"
 		},
 		{
 			"section":"Architecture",
@@ -109,8 +108,7 @@
 			"source":"remote_data.md",
 			"template":"guide.html",
 			"description": "Working with Remote Data such as web services, Facebook and YQL.",
-			"menu":"left",
-			"inprogress":true
+			"menu":"left"
 		},
 		{
 			"section":"Architecture",
@@ -127,8 +125,7 @@
 			"source":"location.md",
 			"template":"guide.html",
 			"description": "Understanding how to use location services such as GPS in your Titanium application.",
-			"menu":"left",
-			"inprogress":true
+			"menu":"left"
 		},
 		{
 			"section":"Architecture",
@@ -207,8 +204,7 @@
 			"source":"testing.md",
 			"template":"guide.html",
 			"description": "Understanding how to test your Titanium applications.",
-			"menu":"right",
-			"inprogress":true
+			"menu":"right"
 		},
 		{
 			"section":"Tools",
@@ -265,8 +261,7 @@
 			"source":"module_android.md",
 			"template":"guide.html",
 			"description": "Extending Titanium with the Android Module Developer Guide",
-			"menu":"right",
-			"inprogress":true
+			"menu":"right"
 		},
 		{
 			"section":"Extending Titanium",

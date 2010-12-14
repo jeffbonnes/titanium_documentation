@@ -19,17 +19,18 @@ You have two options for accessing the source:
 * You can clone the project using the git SCM system (if you are a git user)
 * You can download the project directly by clicking on the "Download Source" button (pictured below)
 
-![github](http://img.skitch.com/20100728-p72d978fs4n3yc4wpgr7jkqghb.png)
+![github](http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/kitchensink_download.png)
 
 # Importing Kitchen Sink into Titanium Developer
 
 Once you have downloaded the source code for Kitchen Sink, you must import the project into Kitchen Sink. Click the "Import Project" button below and navigate to the root directory of the source code folder you downloaded.
 
-![import](http://img.skitch.com/20101025-pr8xfcgj4w2nak3ba3k11jp549.png)
+![import](http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/kitchensink_import.png)
+
 
 Once imported, your project should show up in the left pane of Titanium Developer.
 
-![import2](http://img.skitch.com/20100728-jju1554fjc9igd41hb4867it5p.png)
+![import2](http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/kitchensink_import2.png)
 
 
 If you run into problems running the imported project, it is possible the build artifacts for the package you downloaded are causing issues on your system. If this happens, simply create a new project in Titanium Developer and copy the contents of the Kitchen Sink Resources directory into the Resources directory of the new project. This should enable you to run all of the examples.
@@ -38,7 +39,7 @@ If you run into problems running the imported project, it is possible the build 
 
 Kitchen Sink is structured to make it fairly easy to find various functionality of the Titanium API.
 
-![ks](http://img.skitch.com/20101025-m3jywyjkwf89gcpye6tehpitdi.png)
+![ks](http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/kitchensink_iphone.png)
 
 Kitchen Sink is structured with the following main tabs:
 
