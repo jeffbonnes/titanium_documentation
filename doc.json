@@ -239,6 +239,15 @@
 			"menu":"right"
 		},
 		{
+			"section":"Tutorials",
+			"name":"Building Reusable Factories",
+			"source":"factories.md",
+			"template":"guide.html",
+			"description":"Techniques for building reusable code and libraries.",
+			"menu":"right",
+			"inprogress":true
+		},
+		{
 			"section":"FAQ",
 			"name":"Frequently Asked Questions",
 			"source":"faq.md",
@@ -269,15 +278,6 @@
 			"source":"javascript_frameworks.md",
 			"template":"guide.html",
 			"description":"Extending Titanium with JavaScript Frameworks",
-			"menu":"right",
-			"inprogress":true
-		},
-		{
-			"section":"Extending Titanium",
-			"name":"Building Reusable Factories",
-			"source":"factories.md",
-			"template":"guide.html",
-			"description":"Techniques for building reusable code and libraries.",
 			"menu":"right",
 			"inprogress":true
 		}
