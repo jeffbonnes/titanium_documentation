@@ -18,7 +18,7 @@ When you create a project using Titanium Developer, the command it uses will out
 
 <pre>
 "/opt/titanium/mobilesdk/linux/1.5.X-20101111/project.py",
- "testing", "com.testing.testing", "/home/appcel", 
+ "testing", "com.testing.testing", "/home/appcel",
  "android", "/opt/android-sdk/add-ons"
 </pre>
 
@@ -32,9 +32,11 @@ In this example, Titanium is unable to create a project successfully. By observi
 
 <pre>
 "/opt/titanium/mobilesdk/linux/1.5.X-20101111/project.py",
- "testing", "com.testing.testing", "/home/appcel", 
+ "testing", "com.testing.testing", "/home/appcel",
  "android", "/opt/android-sdk"
 </pre>
+
+![Titanium Developer Edit Profile SDK Path Configuration](../assets/images/guides/start_here/troubleshooting-profile-sdk-path.png)
 
 ## Booting Third-party Emulators
 
@@ -223,7 +225,7 @@ These resources should have ownership granted to the respective user and the fol
 </tr>
 </table>
 
-### Project Files
+## Project Files
 
 The files you are probably most aware of when working with Titanium are those in the project directory:
 
@@ -375,7 +377,7 @@ Lastly,
 
 This section describes a few of the most common issues reported by users, and the recommended action you can try to help resolve them.
 
-<info>It is assumed that you have already 
+<info>It is assumed that you have already
 </info>
 ## Project Creation Error: Error Creating Project
 
@@ -397,9 +399,9 @@ Also, if you view the `Run Emulator` tab for an existing project, you will see t
 No errors are output from Titanium's `--debug`, but it does state the command it attempted to run:
 
 <pre>
-[20:45:33:572] [Titanium.API] [Information] (JavaScript.KKJSList)  
-[ "/opt/titanium/mobilesdk/linux/1.4.X-20101102/android/avd.py", ""/opt/android-sdk"", ]  
-** Message: console message: file:///opt/titanium/modules/linux/tiui/1.0.0/ui.js @139:  
+[20:45:33:572] [Titanium.API] [Information] (JavaScript.KKJSList)
+[ "/opt/titanium/mobilesdk/linux/1.4.X-20101102/android/avd.py", ""/opt/android-sdk"", ]
+** Message: console message: file:///opt/titanium/modules/linux/tiui/1.0.0/ui.js @139:
 /opt/titanium/mobilesdk/linux/1.4.X-20101102/android/avd.py,"/opt/android-sdk"
 </pre>
 
@@ -455,12 +457,12 @@ Then, in Titanium, switch to the `Edit` tab, click the `Save Changes` button (to
 
 You launch your application, but an emulator window does not appear. Eventually, Titanium gives a `trace` logging output as follows:
 <pre>
-[DEBUG] /opt/android-sdk/tools/emulator 
+[DEBUG] /opt/android-sdk/tools/emulator
 -avd titanium_7_WVGA800
 -port 5560
 -sdcard /home/appcel/.titanium/android2.sdcard
--logcat '*:d *' 
--no-boot-anim 
+-logcat '*:d *'
+-no-boot-anim
 -partition-size 128
 [TRACE] NAND: could not create temp file for system NAND disk image: Permission denied[DEBUG] signal caught: 3
 [DEBUG] calling emulator kill on 21325
