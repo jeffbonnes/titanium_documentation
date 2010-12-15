@@ -11,36 +11,38 @@ this guide, you should understand:
 
 # Working With Local data
 
-Even the most rudimentary applications usually have some data storage requirements. As always, Titanium provides access to all the native functionality via its convenient, uniform interface. To use a device's local storage, the following objects are applicable:
+Even the most rudimentary applications usually have some data storage requirements. As always, Titanium provides access to all the native functionality via its convenient, uniform interface. To use a device's local storage, the following objects are needed:
 
 * `Titanium.App.Properties` is ideal for storing application-related settings
-* `Titanium.Database` provides access to the local SQLite3 database
 * `Titanium.Filesystem` facilitates file and directory manipulation
+* `Titanium.Database` gives access to local SQLite3 databases
+
 
 Each of these enable data to persist on a device across application restarts, power cycles, reinstallation and even migration to a new device.
 
 ## What kind of data storage should I use?
 
-The decision about which of the three local data options you choose is usually quite apparent.
+The decision about which of the three local storage options you choose is usually determined by the following:
 
 1. **Properties**. Use these when one or all of the following is true:
-    * the data a simple key/value pair
+    * the data consists of simple key/value pairs
     * the data is related to the application rather than the user
     * the data does not require other data in order to be meaningful or useful
     * there only needs to be one version of the data stored at any one time
-2. **Database**. Use this when one or all of the following is true:
-    * there are many items of data
-    * items of data relate to each other
-    * you need strong control over how the data will be presented when you retrieve it
-    * similar data accumulates over time, is transactional, or logging/archiving
-3. **Filesystem**. Use this when one or all of the following is true:
+2. **Filesystem**. Use this when one or all of the following is true:
     * the data is already provided in file format
     * the data is an image file
+3. **Database**. Use this when one or all of the following is true:
+    * there are many similar data items
+    * data items relate to each other
+    * you require tight flexibility over how the data will be presented when you retrieve it
+    * the data accumulates over time, such as transactional, logging or archiving data
+
 
 <note>
-Although the local database has the capability to store images in blob (binary) format, this won't provide optimal performance to your application. Instead, use `Titanium.Database` to store the image file path and name in the database, and `Titanium.Filesystem` to manage the physical files.
+Although the local database has the capability to store images in blob (binary) format, this won't lead to optimal performance from your application. Instead, use `Titanium.Database` to store the image file path and name in the database, and `Titanium.Filesystem` to manage the physical files.
 
-To keep the local filesystem organised, and thus easier to manage and backup, it's good practice to keep similar files, like these images, in the same location. Properties would be a good candidate for storing this filesystem path, as it is an application setting.
+To keep the local filesystem organised, and thus easier to manage and backup, it's good practice to keep similar files, like these images, in the same location. Properties may be a good candidate for storing this filesystem path, common to all your application's images, as it would be considered an application setting.
 </note>
 
 # Application Properties
@@ -55,11 +57,11 @@ An application's property data is loaded into memory as the application launches
 
 `Titanium.App.Properties` has six sets of get/set methods for handling six different data types:
 
-* **getBool() / setBool()**: a boolean value (true, false, 1, 0)
-* **getDouble() / setDouble()**: a double-precision floating point number
-* **getInt() / setInt()**: an integer
-* **getList() / setList()**: an array
-* **getString() / setString()**: a string
+* **getBool() / setBool()**: for booleans (true, false)
+* **getDouble() / setDouble()**: for double-precision floating point numbers
+* **getInt() / setInt()**: for integers
+* **getList() / setList()**: for arrays
+* **getString() / setString()**: for strings
 
 These *get* methods accept a property name and default value, while the *set* methods require the property name and property value pairs. This is demonstrated below:
 
@@ -78,22 +80,26 @@ Ti.App.Properties.setInt('myInt',10);
 Ti.App.Properties.setBool('myBool',true);
 Ti.App.Properties.setDouble('myDouble',10.6);
 Ti.App.Properties.setList('myList',myArray);
-Ti.API.info("String = " + Ti.App.Properties.getString('myString','This is a string default'));
-Ti.API.info("Integer = " + Ti.App.Properties.getInt('myInt',20));
-Ti.API.info("Boolean = " + Ti.App.Properties.getBool('myBool',false));
-Ti.API.info("Double = " + Ti.App.Properties.getDouble('myDouble',20.6));
-Ti.API.info("List = " + Ti.App.Properties.getList('myList'));
+// **********************************************
+// Notice the use of the second argument of the get* methods below
+// that would be returned if no property exists with that name
+// **********************************************
+Ti.API.info("String: "+Ti.App.Properties.getString('myString','This is a string default'));
+Ti.API.info("Integer: "+Ti.App.Properties.getInt('myInt',20));
+Ti.API.info("Boolean: "+Ti.App.Properties.getBool('myBool',false));
+Ti.API.info("Double: "+Ti.App.Properties.getDouble('myDouble',20.6));
+Ti.API.info("List: "+Ti.App.Properties.getList('myList'));
 window.open();
 </code>
 
-This code results in the following output:
+This code outputs the following results:
 
 <pre>
-String = This is a string
-Integer = 10
-Boolean = true
-Double = 10.600000381469727
-List =
+String: This is a string
+Integer: 10
+Boolean: true
+Double: 10.600000381469727
+List:
   {  'address' :  '1 Main St' 'name' :  'Name 1', },
   {  'address' :  '2 Main St' 'name' :  'Name 2', },
   {  'address' :  '3 Main St' 'name' :  'Name 3', },
@@ -102,7 +108,7 @@ List =
 
 ## Storing JS objects as JSON in properties
 
-If you have a complex JS object, you can convert it to a string and store it using the [Titanium.App.Properties.setString()](http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.App.Properties.setString-method.html) method.
+If you have a complex Javascript object, you can convert it to a JSON string using `JSON.stringify()`, which will allow you to store it in the database using the [Titanium.App.Properties.setString()](http://developer.appcelerator.com/apidoc/mobile/latest/Titanium.App.Properties.setString-method.html) method.
 
 <code class="javascript">
 var window = Titanium.UI.createWindow({
@@ -114,22 +120,23 @@ var weatherData =
     {
         "city": "Mountain View",
         "condition": "Cloudy",
-        "icon": "http://www.google.com/ig/images/weather/cloudy.gif"
+        "icon": "http://www.google.com/weather/cloudy.gif"
     },
     {
         "city": "Washington, DC",
         "condition": "Mostly Cloudy",
-        "icon": "http://www.google.com/ig/images/weather/mostly_cloudy.gif"
+        "icon": "http://www.google.com/weather/mostly_cloudy.gif"
     },
     {
         "city": "Brasilia",
         "condition": "Thunderstorm",
-        "icon": "http://www.google.com/ig/images/weather/thunderstorm.gif"
+        "icon": "http://www.google.com/weather/thunderstorm.gif"
     }
   ]
 };
 Ti.App.Properties.setString('myJSON', JSON.stringify(weatherData));
-Ti.API.info("The myJSON property contains: " + Ti.App.Properties.getString('myJSON', 'myJSON was not found'));
+var retrievedJSON=Ti.App.Properties.getString('myJSON', 'myJSON not found');
+Ti.API.info("The myJSON property contains: " + retrievedJSON);
 window.open();
 </code>
 
@@ -139,27 +146,11 @@ This will output the following to the log:
 The myJSON property contains: {"reports":[{"icon":"http:\/\/www.google.com\/ig\/images\/weather\/cloudy.gif","condition":"Cloudy","city":"Mountain View"},{"icon":"http:\/\/www.google.com\/ig\/images\/weather\/mostly_cloudy.gif","condition":"Mostly Cloudy","city":"Washington, DC"},{"icon":"http:\/\/www.google.com\/ig\/images\/weather\/thunderstorm.gif","condition":"Thunderstorm","city":"Brasilia"}]}
 </pre>
 
-This stored object can later be converted back to an object using `JSON.parse()`:
+This stored JSON string can later be converted back to a Javascript object using `JSON.parse()`:
 
 <code class="javascript">
 var myObject = JSON.parse(Ti.App.Properties.getString('myJSON'));
 </code>
-
-
-
-# SQLite Databases
-[this section is to be completed soon]
-## SQL basics and further reading on SQLite
-[this section is to be completed soon]
-## Storing data
-[this section is to be completed soon]
-## Reading data
-[this section is to be completed soon]
-## Updating data
-[this section is to be completed soon]
-## Pre-populating a database
-[this section is to be completed soon]
-
 
 # Filesystem Storage
 
@@ -251,3 +242,16 @@ newDir.deleteDirectory();
 </code>
 
 The full gist for this example is available [here](https://gist.github.com/737045).
+
+# SQLite Databases
+[this section is to be completed soon]
+## SQL basics and further reading on SQLite
+[this section is to be completed soon]
+## Storing data
+[this section is to be completed soon]
+## Reading data
+[this section is to be completed soon]
+## Updating data
+[this section is to be completed soon]
+## Pre-populating a database
+[this section is to be completed soon]
