@@ -100,7 +100,8 @@
 			"source":"local_data.md",
 			"template":"guide.html",
 			"description": "Working with Local Data such as files, databases and properties.",
-			"menu":"left"
+			"menu":"left",
+			"inprogress":true
 		},
 		{
 			"section":"Architecture",
