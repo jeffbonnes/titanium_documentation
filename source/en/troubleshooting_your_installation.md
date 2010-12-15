@@ -36,7 +36,7 @@ In this example, Titanium is unable to create a project successfully. By observi
  "android", "/opt/android-sdk"
 </pre>
 
-![Titanium Developer Edit Profile SDK Path Configuration](../assets/images/guides/start_here/troubleshooting-profile-sdk-path.png)
+![Titanium Developer Edit Profile SDK Path Configuration](../assets/images/guides/start_here/troubleshooting-edit-profile-sdk-path.png)
 
 ## Booting Third-party Emulators
 
