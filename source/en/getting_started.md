@@ -11,7 +11,7 @@ This guide covers getting up and running with Appcelerator Titanium&trade;. Afte
 # Welcome to Titanium!
 
 Thanks for checking out Titanium - we hope you'll have your first native application for desktop or mobile up and running
-before dinner.  Before we get into installing and running Titanium, let's (very) briefly go over what the Titanium platform is, 
+before dinner.  Before we get into installing and running Titanium, let's (very) briefly go over what the Titanium platform is,
 how it works at a shallow level, and the kinds of capabilities you can expect to find.
 
 ![platform](http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/gs_overview.png)
@@ -19,8 +19,8 @@ how it works at a shallow level, and the kinds of capabilities you can expect to
 ## Titanium Desktop SDK
 
 The Titanium Desktop SDK provides a runtime environment for creating native desktop applications in HTML, CSS, and JavaScript.
-Titanium Desktop packages up your application source code (HTML/CSS/JavaScript) with a heavily augmented build of the popular 
-[Webkit](http://webkit.org) open source web browser engine.  Your Titanium Desktop application is basically a web page (or pages) 
+Titanium Desktop packages up your application source code (HTML/CSS/JavaScript) with a heavily augmented build of the popular
+[Webkit](http://webkit.org) open source web browser engine.  Your Titanium Desktop application is basically a web page (or pages)
 and a web browser packaged into a single executable program.  But your desktop app is more than just a local web page -
 Titanium Desktop apps have access to enhanced native functionality, like file system access, media, the ability to run external
 processes, native UI chrome, and more.  You can also package Ruby, Python, or PHP code with your application, further extending
@@ -29,14 +29,14 @@ the capabilities of your always-on desktop application.
 ## Titanium Mobile SDK
 
 The Titanium Mobile SDK allows you to create, run, and package real native mobile applications for iOS, Android, and BlackBerry (beta)
-devices using our cross-platform JavaScript APIs.  But unlike Titanium Desktop, where applications run inside a web browser engine, 
-Titanium Mobile applications are run against a standalone JavaScript engine which invokes native APIs.  As a developer, 
-you are in fact writing a native application - it's just that you're using cross-platform JavaScript rather than 
-non-portable Java or Objective-C.  
+devices using our cross-platform JavaScript APIs.  But unlike Titanium Desktop, where applications run inside a web browser engine,
+Titanium Mobile applications are run against a standalone JavaScript engine which invokes native APIs.  As a developer,
+you are in fact writing a native application - it's just that you're using cross-platform JavaScript rather than
+non-portable Java or Objective-C.
 
-Titanium Mobile apps use native UI and platform APIs, and run at close to full native speed.  The Titanium Mobile SDK works with the 
-native SDK tool chains to combine your JavaScript source code, a JavaScript interpreter, and your static assets into an application 
-binary that will be installed to an emulator or mobile device.  It's worth mentioning that you could write your application UI in 
+Titanium Mobile apps use native UI and platform APIs, and run at close to full native speed.  The Titanium Mobile SDK works with the
+native SDK tool chains to combine your JavaScript source code, a JavaScript interpreter, and your static assets into an application
+binary that will be installed to an emulator or mobile device.  It's worth mentioning that you could write your application UI in
 HTML and CSS, but typically you will use native UI components through a Titanium JavaScript API.
 
 ## Titanium Developer
@@ -58,37 +58,53 @@ Titanium Developer and the Mobile and Desktop SDKs are tested using the followin
 You may find that other OS versions will work fine also, but these are the OS versions we test against.
 </info>
 
-To install the Titanium Developer application, navigate to the [Titanium Download Page](http://www.appcelerator.com/download) 
+To install the Titanium Developer application, navigate to the [Titanium Download Page](http://www.appcelerator.com/download)
 and download the Titanium Developer installer for your operating system. If the download doesn't begin automatically, you can
 manually select the download you are interested in.
 
-After a push-button installation on your operating system, Titanium Developer will be available to launch.  The first time you run 
+After a push-button installation on your operating system, Titanium Developer will be available to launch.  The first time you run
 Titanium Developer, it will automatically download and extract the most current versions of the Mobile and Desktop SDKs.
-This can take some time.  For those of you interested in doing mobile development, you will also need to download and install 
+This can take some time.  For those of you interested in doing mobile development, you will also need to download and install
 the native development SDKs for the devices you are targeting.
 
 ## Preparing for iOS development
-For iOS you will need to have a Mac running OS 10.6 (Snow Leopard) and an iOS developer account (the account is free, but to run 
-on device, you will need to pay a $99/year fee for the iOS developer program).  Installing the iOS SDK is as easy as 
-[downloading the SDK and Xcode](http://developer.apple.com/iphone), mounting and running the disk image, and following the 
+For iOS you will need to have a Mac running OS 10.6 (Snow Leopard) and an iOS developer account (the account is free, but to run
+on device, you will need to pay a $99/year fee for the iOS developer program).  Installing the iOS SDK is as easy as
+[downloading the SDK and Xcode](http://developer.apple.com/iphone), mounting and running the disk image, and following the
 onscreen instructions.
 
 ## Preparing for Android development
-Before doing any sort of Android development, you will need the [Java SDK (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 
+Before doing any sort of Android development, you will need [Sun/Oracle Java SDK (JDK)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 installed on your system.  Note that this is NOT the same as the Java Runtime Environment (JRE) installed on many computers.
-Additionally, you must place the `bin` directory of your Java installation on your system path, such that the `java` and `javac`
-commands are available to the logged in user.
 
-For Android, you will need to [download and unzip the Android SDK](http://developer.android.com/sdk/index.html) somewhere on your 
-system.  Once unzipped, run the `android` command from `[SDK HOME]/tools`.  This will bring up an attractive Java Swing UI which 
-will allow you to install the various Android SDK flavors.  In order to create a project, Titanium requires Android 1.6 (APIs level 4), 
+<info>
+Before you install anything, search your system for the `java` and `javac` executables, to determine whether they are already installed and are of the correct vendor and minimum version, which is Sun/Oracle 32-bit SDK 1.6. When found, run these commands:
+
+~~~
+/path/to/java -version
+/path/to/javac -version
+~~~
+
+If you have multiple versions installed, you will need to ensure that the correct one is being used by default. To do this, run the following without the full path, and compare the results to those produced above:
+
+~~~
+java -version
+javac -version
+~~~
+
+The default executables can be controlled by adjusting your system's PATH variable.
+</info>
+
+For Android, you will need to [download and unzip the Android SDK](http://developer.android.com/sdk/index.html) somewhere on your
+system.  Once unzipped, run the `android` command from `[SDK HOME]/tools`.  This will bring up an attractive Java Swing UI which
+will allow you to install the various Android SDK flavors.  In order to create a project, Titanium requires Android 1.6 (APIs level 4),
 and version 6 of the Android tools or better to be installed through this tool:
 
 ![img](http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/gs_android.png)
 
 You may want to download any additional Android OS versions you'd like to test against at this time.  Currently, Titanium Mobile supports
-Android OS versions 1.6, 2.1, and 2.2.  OS versions are available for download under the "Available Packages" heading in the `android` 
-tool. It is definitely worth your time to browse the [Android SDK documentation](http://developer.android.com/guide/index.html) for more 
+Android OS versions 1.6, 2.1, and 2.2.  OS versions are available for download under the "Available Packages" heading in the `android`
+tool. It is definitely worth your time to browse the [Android SDK documentation](http://developer.android.com/guide/index.html) for more
 on the tools available to you with the Android SDK.
 
 ## Preparing for BlackBerry development
@@ -101,7 +117,7 @@ install the Eclipse-based development tool chain provided by RIM.
 # Hello World!
 
 When Developer launches for the first time, you will be prompted to sign in with your Appcelerator Network account.  If you don't
-have an Appcelerator Network account, you can create one using the form provided. Once you are signed in, you will be ready to 
+have an Appcelerator Network account, you can create one using the form provided. Once you are signed in, you will be ready to
 proceed with creating your first Titanium project.
 
 ![new project](http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/gs_new_project.png)
@@ -141,7 +157,7 @@ options for Titanium.
 
 ## Where's my code?
 <img src="http://developer.appcelerator.com.s3.amazonaws.com/documentation-examples/gs_tiappxml.png" style="float:right;margin:0 0 20px 20px;"></img>
-After your project is created, a starter project will be created for you in the directory you specified.  All project types share 
+After your project is created, a starter project will be created for you in the directory you specified.  All project types share
 a similar layout:
 
 * A `build` directory, which contains the assets necessary for actually running your application code on your target OS(es).  This
@@ -151,7 +167,7 @@ your application.
 * A `tiapp.xml` file, which contains static configuration for your application.
 
 Titanium Developer does not (yet) provide a text editor, so it is expected that you will use the text editor or IDE of your
-choice to actually write application code.  The Resources directory will already contain a simple application that you can run 
+choice to actually write application code.  The Resources directory will already contain a simple application that you can run
 from Titanium Developer right away.  [Check out the application project structure guide](app_structure.html) for more details.
 
 ## Running your application
@@ -171,7 +187,7 @@ A default desktop application should look like this:
 
 # What's Next?
 
-Now that you have a functional Titanium environment, there are numerous guides available here to further your education.  The 
+Now that you have a functional Titanium environment, there are numerous guides available here to further your education.  The
 following are the recommended next steps for mobile developers:
 
 ## The Kitchen Sink
@@ -183,7 +199,7 @@ your "how do I..." type questions.
 
 ## Titanium Fundamentals
 
-Before you can progress too far into a Titanium application, you will probably want to understand the 
+Before you can progress too far into a Titanium application, you will probably want to understand the
 [contents and structure of a Titanium Mobile application](app_structure.html).  This will help you to understand all the moving
 parts of your mobile app.  To get a basic grasp of how Titanium works, check out [this architecture guide](architecture.html)
 for more on Titanium's pre-compile, build, and runtime behavior.
