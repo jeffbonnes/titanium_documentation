@@ -26,7 +26,7 @@
 
 # Other
 
-* [Browser Search Engines](http://mycroft.mozdev.org/search-engines.html?name=appcelerator&category=64&author=hal+h) (Sherlock / OpenSearch format)
+* [Browser Search Engines](http://mycroft.mozdev.org/search-engines.html?author=Hal+H&skipcache=yes) (Sherlock / OpenSearch format)
 
 # Reporting other tools
 
