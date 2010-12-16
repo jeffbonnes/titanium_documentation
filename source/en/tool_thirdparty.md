@@ -24,6 +24,10 @@
 * [Visual Studio Doc Plugin](http://www.jeremymelton.com/blog/2010/10/appcelerator-titanium-vsdoc-for-visual-studio/)
 * [Livetanium](http://blog.krawaller.se/livetanium)
 
+# Other
+
+* [Browser Search Engines](http://mycroft.mozdev.org/search-engines.html?name=appcelerator&category=64&author=hal+h) (Sherlock / OpenSearch format)
+
 # Reporting other tools
 
 If you have a tool or utility etc. that works with Titanium and would like it to be listed here, please let us know by [emailing us](mailto:docs@appcelerator.com).
